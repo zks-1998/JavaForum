@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <head th:insert="~{import :: head}"></head>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-3.4.1.js"></script>
+</head>
+<body>
+
+<div th:fragment="activity" class="activity">
+    <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12" style="text-align: center">
+        <h3 class="hot-title">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-huo"></use>
+            </svg>热门活动
+        </h3>
+        <div id="imgs" data-interval="2000" data-ride="carousel" class="carousel slide " style="width: 100%">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <a href="https://www.23673.com/python2/index.html"><img src="/images/python-ad.png" style="width: 100%"></a>
+                </div>
+                <div class="item">
+                    <a href="https://www.aliyun.com/sale-season/2020/procurement?spm=5176.12825654.amxosvpfn.d83.3dbd2c4awUSgA9&scm=20140722.1671.8.1693&aly_as=bprcUVtxN"><img src="/images/aliyun.png" style="width: 100%"></a>
+                </div>
+                <ul class="carousel-indicators">
+                    <li data-target="#imgs" data-slide-to="0" class="active"></li>
+                    <li data-target="#imgs" data-slide-to="1"></li>
+                </ul>
+            </div>
+            <a href="#imgs" data-slide="prev" class="carousel-control left" style="margin-top:100px;"><</a>
+            <a href="#imgs" data-slide="next" class="carousel-control right" style="margin-top:100px;">></a>
+        </div>
+
+        <div>
+            <svg class="icon svg-icon" aria-hidden="true" style="font-size: 40px">
+               <use xlink:href="#icon-weixin"></use>
+            </svg>
+            <div>
+               <img src="/images/wechat.png" width="90" height="80">
+            </div>
+        </div>
+
+        <div>
+            <svg class="icon svg-icon" aria-hidden="true" style="font-size: 40px">
+                <use xlink:href="#icon-QQ"></use>
+            </svg>
+            <div>
+                <img src="/images/QQ.png" width="120" height="100">
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

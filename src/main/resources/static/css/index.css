@@ -1,0 +1,23 @@
+.glyphicon-list{
+    color: #31caff;
+}
+.find-title{
+    padding-right: 5px;
+    color: black;
+    font-family: cursive;
+}
+.find-title:hover{
+    -webkit-box-shadow: inset -2px -2px 1px #3dfff5;  /*bxsh 阴影 水平偏移 垂直偏移 模糊距离 颜色*/
+    color: rgb(49, 202, 255);
+}
+.hot-title{
+    color: rgb(199, 92, 92);
+    font-family: cursive;
+    text-shadow: red 5px 5px 10px;
+    transition:all 2s linear;
+}
+.hot-title:hover{
+    color: #ffd15b;
+}
+
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <head th:insert="~{import :: head}"></head>
+    <link href="/css/navigation.css" rel="stylesheet">
+</head>
+<body>
+<div th:fragment="nav">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">冰点专业IT社区</span>
+                </button>
+                <a class="navbar-brand" th:href="@{/}">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-iceberg__easyiconnet"></use>
+                    </svg>
+                    <span class="ice-point-title">Java社区</span>
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="navbar-form navbar-left" th:action="@{/question/search}" method="get">
+                    <div class="form-group">
+                        <input type="text" name="search" class="form-control" placeholder="搜索问题,不超过20个字" maxlength="20">
+                    </div>
+                    <button type="submit" class="btn search-button">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-sousuo"></use>
+                        </svg>
+                        搜索
+                    </button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li th:if="${session.user!=null}">
+                        <a href="/publish" style="display: inline-block">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-wentifankui"></use>
+                            </svg>
+                            提问
+                        </a>
+                        <a href="/profile/replies" style="display: inline-block">
+                            <span>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-dabianyanjiuwenti"></use>
+                                </svg>
+                                通知
+                            </span>
+                            <span class="badge" th:text="${session.countStatus}" style="margin-left: 2px;color: #333; background: #d9edf7"></span></a>
+                    </li>
+                    <li class="dropdown" th:if="${session.user != null}">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">
+                            <span><img class="media-object img-rounded"
+                                       th:src="${session.user.avatarUrl}" style="width: 25px;height: 25px;display: inline-block"></span>
+                            <span th:text="${session.user.getName()}"></span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/profile/questions">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-wentifankui1"></use>
+                                </svg>
+                                我的问题
+                            </a></li>
+                            <li><a href="/logout">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-gonghuichengyuanzhuxiao"></use>
+                                </svg>
+                                退出登录
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li th:if="${session.user == null}">
+                        <a th:href="@{https://github.com/login/oauth/authorize(client_id='3987e32e8e5793aed4e2',redirect_uri=${#httpServletRequest.getRequestURL()+'callback'},scope='user',state=1)}">
+                             <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-github"></use>
+                            </svg>
+                            登录
+                        </a>
+                        <!--<a th:href="https://github.com/login/oauth/authorize?client_id=3987e32e8e5793aed4e2&redirect_uri=http://localhost:8080/callback&scope=user&state=1">
+
+                        </a>-->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+</body>
+</html>
