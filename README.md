@@ -25,6 +25,23 @@
 [Live Reload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/related)  
 [Postman](https://chrome.google.com/webstore/detail/coohjcphdfgbiolnekdpbcijmhambjff)
 
+## 页面展示
+
+1.首页
+![首页](https://github.com/zks-1998/JavaForum/blob/master/src/main/resources/static/exhibition/01.png)
+
+2.提问页面
+![提问页面](https://github.com/zks-1998/JavaForum/blob/master/src/main/resources/static/exhibition/02.png)
+
+3.问题详情页面
+![问题详情页面](https://github.com/zks-1998/JavaForum/blob/master/src/main/resources/static/exhibition/04.png)
+
+4.查看问题和通知
+![问题详情页面](https://github.com/zks-1998/JavaForum/blob/master/src/main/resources/static/exhibition/03.png)
+
+
+
+
 
 
 
