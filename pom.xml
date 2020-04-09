@@ -44,19 +44,11 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>2.0.0</version>
         </dependency>
-
         <!-- mysql-connector-java -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.16</version>
-        </dependency>
-
-        <!--h2数据库需要jdbc驱动-->
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <version>1.4.199</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -119,15 +111,15 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>5.2.4</version>
                 <configuration>
-                    <url>jdbc:h2:~/community</url>
-                    <user>sa</user>
-                    <password>123</password>
+                    <url>jdbc:mysql://localhost:3306/javaforam?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf-8</url>
+                    <user>root</user>
+                    <password>zks123456</password>
                 </configuration>
                 <dependencies>
                     <dependency>
-                        <groupId>com.h2database</groupId>
-                        <artifactId>h2</artifactId>
-                        <version>1.4.199</version>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>8.0.16</version>
                     </dependency>
                 </dependencies>
             </plugin>
@@ -146,9 +138,9 @@
                 <version>1.4.0</version>
                 <dependencies>
                     <dependency>
-                        <groupId>com.h2database</groupId>
-                        <artifactId>h2</artifactId>
-                        <version>1.4.199</version>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>8.0.16</version>
                     </dependency>
                 </dependencies>
             </plugin>

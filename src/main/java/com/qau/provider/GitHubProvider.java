@@ -6,7 +6,7 @@ import com.qau.dto.GithubUser;
 import okhttp3.*;
 import org.springframework.stereotype.Component;
 
-@Component //放入了Ioc容器
+@Component //普通的POJO放入Ioc容器
 public class GitHubProvider {
     public String getAccessToken(AccessTokenDTO accessTokenDTO) {
         MediaType mediaType = MediaType.get("application/json; charset=utf-8");

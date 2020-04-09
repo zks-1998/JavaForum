@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 @MapperScan(basePackages = "com.qau.mapper")
 public class CommunityApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(CommunityApplication.class, args);
     }
