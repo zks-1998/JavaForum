@@ -39,7 +39,10 @@
 4.查看问题和通知
 ![问题详情页面](https://github.com/zks-1998/JavaForum/blob/master/src/main/resources/static/exhibition/03.png)
 
-
+Mybatis逆向工程命令:
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
+Flyway命令:
+mvn flyway:migrate
 
 
 
