@@ -111,7 +111,7 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>5.2.4</version>
                 <configuration>
-                    <url>jdbc:mysql://localhost:3306/javaforam?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf-8</url>
+                    <url>jdbc:mysql://localhost:3306/javaforum?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf-8</url>
                     <user>root</user>
                     <password>zks123456</password>
                 </configuration>
